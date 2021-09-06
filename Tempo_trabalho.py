@@ -1,7 +1,7 @@
 dados = dict()
 dados['name'] = str(input("Name: "))
 dados['idade'] = int(input('How old are you: '))
-dados['data'] = str(input("Do you work: [y/n] "))
+dados['Work'] = str(input("Do you work: [y/n] "))
 if dados['data'] in 'Yy':
     dados['year'] = int(input("When do you started work: (year) "))
     dados['cash'] = float(input("How much was your salary: "))
