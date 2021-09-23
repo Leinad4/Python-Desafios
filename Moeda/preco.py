@@ -1,9 +1,6 @@
 import moeda
-preco = float(input("Dígite o preço:R$ "))
-taxa = str(input("Tem taxa: Y/N ")).upper()[0]
-if taxa in 'Y':
-    t = int(input("Qual é o valor da taxa: "))
-print(f"A metade de R${preco:5.2f} é R${moeda.metade(preco):5.2f}")
-print(f"O dobro de R${preco:5.2f} é R${moeda.dobro(preco):5.2f}")
-if taxa in 'Y':
-    print(f"Com um aumento de {t}%, temos R${moeda.aumento(preco, t):5.2f}")
+v = float(input("Dígite um valor: "))
+t = int(input("Dígite a taxa: "))
+print(f"A metade de {moeda.moeda(v)} é {moeda.metade(v, True)}")
+print(f"O dobro de {moeda.moeda(v)} é {moeda.dobro(v, True)}")
+print(f"Com uma taxa de {t}% houve um aumento de {moeda.aumento(v, t, True)}")
